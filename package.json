@@ -1,0 +1,75 @@
+{
+  "name": "react-search-select",
+  "version": "1.1.0",
+  "description": "search bar with autosuggest",
+  "keywords": [
+    "search",
+    "search bar",
+    "autosuggest",
+    "react",
+    "react-component"
+  ],
+  "homepage": "https://github.com/rohanarihant/react-search-select",
+  "bugs": {
+    "url": "https://github.com/rohanarihant/react-search-select/issues"
+  },
+  "license": "MIT",
+  "author": "Vakhtang Sidamonidze <vakhtang@outlook.com>",
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build-lib": "babel src --out-dir lib",
+    "build-demo": "webpack --config=demo/webpack.config.js -p",
+    "build": "concurrently 'npm run build-lib' 'npm run build-demo'",
+    "check": "npm run lint && npm run test",
+    "lint": "eslint src/**",
+    "start": "webpack-dev-server --config=demo/webpack.config.js --open",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rohanarihant/react-search-select"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.2.0",
+    "concurrently": "^4.1.0",
+    "css-loader": "^2.1.1",
+    "enzyme": "^3.9.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.7.1",
+    "prettier": "1.17.0",
+    "prop-types": "^15.7.2",
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.30.0",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.11",
+    "react": "^16.8.6",
+    "react-autobind": "^1.0.6",
+    "react-html-attributes": "^1.4.3"
+  },
+  "jest": {
+    "modulePaths": [
+      "./src"
+    ]
+  }
+}
