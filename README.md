@@ -1,4 +1,4 @@
-A general-purpose search bar, built in latest version of React 16.8.6  . View the [demo]
+A general-purpose search and select bar, compatible with latest version of React 16  . View the [demo](https://rohanarihant.github.io/react-search-selct/)
 
 ## Development
 
@@ -33,6 +33,7 @@ npm run check
 Also accepts [supported HTML attributes](https://facebook.github.io/react/docs/dom-elements.html#all-supported-html-attributes) for the `<input>` element.
 
 <sup id="footnote">1</sup> Only when `renderSearchButton` is `true`
+
 
 ## License
 

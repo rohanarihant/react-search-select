@@ -1,6 +1,6 @@
 {
   "name": "react-search-select",
-  "version": "1.1.0",
+  "version": "1.1.3",
   "description": "search bar with autosuggest",
   "keywords": [
     "search",
@@ -9,7 +9,7 @@
     "react",
     "react-component"
   ],
-  "homepage": "https://github.com/rohanarihant/react-search-select",
+  "homepage": "https://rohanarihant.github.io/react-search-selct/",
   "bugs": {
     "url": "https://github.com/rohanarihant/react-search-select/issues"
   },
@@ -27,7 +27,9 @@
     "check": "npm run lint && npm run test",
     "lint": "eslint src/**",
     "start": "webpack-dev-server --config=demo/webpack.config.js --open",
-    "test": "jest"
+    "test": "jest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -50,20 +52,21 @@
     "jest": "^24.7.1",
     "prettier": "1.17.0",
     "prop-types": "^15.7.2",
-    "react-dom": "^16.8.6",
-    "react-test-renderer": "^16.8.6",
+    "react-dom": "^16.0.0",
+    "react-test-renderer": "^16.0.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.30.0",
     "webpack-dev-server": "^3.3.1"
   },
   "peerDependencies": {
-    "react": "^16.8.6"
+    "react": "^16.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "gh-pages": "^2.0.1",
     "lodash": "^4.17.11",
-    "react": "^16.8.6",
+    "react": "^16.0.0",
     "react-autobind": "^1.0.6",
     "react-html-attributes": "^1.4.3"
   },

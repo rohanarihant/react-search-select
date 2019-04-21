@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import autoBind from 'react-autobind';
+
 import SearchBar from '../src';
 import styles from './demo.css';
 import words from './words.json';
@@ -12,9 +14,7 @@ class App extends React.Component {
       suggestions: []
     };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleClear = this.handleClear.bind(this);
-    this.handleSelection = this.handleSelection.bind(this);
+    autoBind(this, 'handleChange', 'handleClear', 'handleSelection');
   }
 
   handleClear() {
@@ -25,7 +25,7 @@ class App extends React.Component {
 
   handleChange(input) {
     this.setState({
-      suggestions: words.filter(word => word.startsWith(input))
+      suggestions: words.filter(word => word.startsWith(input.city))
     });
   }
 
@@ -56,7 +56,7 @@ class App extends React.Component {
         autoFocus
         renderClearButton
         renderSearchButton
-        placeholder="select an SAT word"
+        placeholder="search and select any city"
         onChange={this.handleChange}
         onClear={this.handleClear}
         onSelection={this.handleSelection}
